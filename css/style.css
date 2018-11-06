@@ -1,0 +1,75 @@
+/* General Styles */
+* {
+  font-family: "Courier New";
+  font-weight: bold;
+  color: rgb(77, 195, 255);
+}
+
+body {
+  background: black;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.show {
+  max-height: 1000px;
+  transition-duration: 1s;
+  display: block;
+}
+
+.hide {
+  max-height: 0;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+
+/* Start Screen and Game Screen Styles */
+#start-screen, #game-screen {
+  text-align: center;
+  overflow: hidden;  
+}
+
+#game-screen.show {
+  transition-delay: 1s;
+}
+
+#start {
+  background-color: black;
+  border: 5px solid rgb(77, 195, 255);
+  border-radius: 5px;
+  font-size: 3em;
+  display: block;
+  margin: 100px auto;
+}
+
+#start:hover {
+  cursor: pointer;
+  background-color: rgb(77, 195, 255);
+  color: black;
+}
+
+#start:active,
+#start:focus {
+  outline: none;
+}
+
+#word-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#word-list > li {
+  padding: 5px;
+}
+
+#word-list > li.disabled {
+  color: #ccc;
+}
+
+#word-list > li:not(.disabled):hover {
+  color: rgb(230, 247, 255);
+  font-size: 1.5em;
+  cursor: pointer;
+}
